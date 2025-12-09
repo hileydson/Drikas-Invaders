@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const ROCKET_SCENE = preload("res://elements/rocket/rocket.tscn")
+@onready var peido: AudioStreamPlayer = $"../Peido"
 
 const SPEED = 300.0
 
@@ -13,6 +14,7 @@ func _physics_process(delta: float):
 	move_and_slide()
 
 func shot():
+	peido.play()
 	var rocket = ROCKET_SCENE.instantiate()
 	rocket.global_position = global_position + Vector2(0, -30)
 	add_child(rocket)

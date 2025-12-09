@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6x6p6mbn1pys"]
+[gd_scene load_steps=8 format=3 uid="uid://b6x6p6mbn1pys"]
 
 [ext_resource type="Script" uid="uid://bl4tt31ma8ndy" path="res://ui/start_game/start_game.gd" id="1_rfoff"]
+[ext_resource type="AudioStream" uid="uid://ccycrbnl46sxw" path="res://assets/sound0.wav" id="2_3fqi7"]
 [ext_resource type="Texture2D" uid="uid://drnslwr1gira5" path="res://assets/Space_Stars2.png" id="2_3kawa"]
 [ext_resource type="Texture2D" uid="uid://bah388w12h7f8" path="res://assets/dri_tosca_1.png" id="2_k6a0g"]
+[ext_resource type="AudioStream" uid="uid://cwsaqb307nk34" path="res://assets/drika_2.mp3" id="3_bvnx8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lisxc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -17,6 +19,12 @@ bg_color = Color(0.729412, 0.533333, 0.0862745, 1)
 
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_rfoff")
+
+[node name="Sound0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3fqi7")
+
+[node name="Drika2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bvnx8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

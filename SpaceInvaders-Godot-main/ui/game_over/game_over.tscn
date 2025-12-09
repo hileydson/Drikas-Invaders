@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwr53umh4a2js"]
+[gd_scene load_steps=7 format=3 uid="uid://cwr53umh4a2js"]
 
 [ext_resource type="Script" uid="uid://cugdh2tascxll" path="res://ui/game_over/game_over.gd" id="1_xgqeb"]
+[ext_resource type="AudioStream" uid="uid://clburspxl88ac" path="res://assets/peido.mp3" id="2_4cp6t"]
 [ext_resource type="Texture2D" uid="uid://drnslwr1gira5" path="res://assets/Space_Stars2.png" id="2_5nexe"]
+[ext_resource type="AudioStream" uid="uid://cwsaqb307nk34" path="res://assets/drika_2.mp3" id="3_6lpyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lisxc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -14,8 +16,14 @@ border_color = Color(0.729412, 0.533333, 0.0862745, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q6wb"]
 bg_color = Color(0.729412, 0.533333, 0.0862745, 1)
 
-[node name="GameOver" type="CanvasLayer"]
+[node name="GameOver2" type="CanvasLayer"]
 script = ExtResource("1_xgqeb")
+
+[node name="Peido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4cp6t")
+
+[node name="Drika2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6lpyu")
 
 [node name="SpaceStars2" type="Sprite2D" parent="."]
 position = Vector2(120.99994, 110)

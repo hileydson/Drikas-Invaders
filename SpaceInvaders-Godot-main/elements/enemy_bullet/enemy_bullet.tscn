@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbry33qqots3s"]
+[gd_scene load_steps=5 format=3 uid="uid://dbry33qqots3s"]
 
 [ext_resource type="Script" uid="uid://cneeip85j7ola" path="res://elements/enemy_bullet/enemy_bullet.gd" id="1_1mxbv"]
 [ext_resource type="Texture2D" uid="uid://ceher51io5vfs" path="res://assets/chupeta.png" id="2_iumo1"]
+[ext_resource type="AudioStream" uid="uid://cd4dlv4vu43e" path="res://assets/drika_1.mp3" id="2_l0oir"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qphd7"]
 radius = 1.0
@@ -12,6 +13,9 @@ top_level = true
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_1mxbv")
+
+[node name="Drika1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_l0oir")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4.7683716e-07, 0)
