@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dunjybudq3n85"]
+
+[ext_resource type="Script" uid="uid://iitmnhry5utd" path="res://elements/rocket/rocket.gd" id="1_makr2"]
+[ext_resource type="Texture2D" uid="uid://drd56a7wjye0g" path="res://assets/mamadeira.png" id="2_e8x5b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vsdus"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_e8x5b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kf41v"]
+radius = 3.0
+height = 14.0
+
+[node name="Rocket" type="CharacterBody2D"]
+top_level = true
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_makr2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.536743e-07, -0.9999995)
+scale = Vector2(0.053000003, 0.04999999)
+sprite_frames = SubResource("SpriteFrames_vsdus")
+autoplay = "default"
+frame_progress = 0.309892
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_kf41v")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-0.5, 3)
+scale = Vector2(0.35, 0.9)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

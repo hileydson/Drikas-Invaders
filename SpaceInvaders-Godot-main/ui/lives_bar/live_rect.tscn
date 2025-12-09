@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi40jlqggynqm"]
+
+[ext_resource type="Texture2D" uid="uid://bah388w12h7f8" path="res://assets/dri_tosca_1.png" id="1_7mc0i"]
+
+[node name="LiveRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = ExtResource("1_7mc0i")
+expand_mode = 1
+stretch_mode = 5
